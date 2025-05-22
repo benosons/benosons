@@ -95,8 +95,8 @@
 ---
 
 <!--START_REPOS_COUNT-->
-  Total repositories: 70 
-  Public: 17  
-  Private: 53  
+  Total repositories: 76  
+  Public: 19  
+  Private: 57  
   Forked: 5
   <!--END_REPOS_COUNT-->
