@@ -95,5 +95,8 @@
 ---
 
 <!--START_REPOS_COUNT-->
-Total repositories: 0
+Total repositories: 0  
+Public: 0  
+Private: 0  
+Forked: 0
 <!--END_REPOS_COUNT-->
