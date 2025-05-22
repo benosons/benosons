@@ -90,7 +90,7 @@
 
 ### 🙌 Let's Connect!
 
-💬 DM via [LinkedIn](https://www.linkedin.com/in/retno-sonjaya) • 📧 Email: `re.sonajaya@gmail.com.com`
+💬 DM via [LinkedIn](https://www.linkedin.com/in/retno-sonjaya) • 📧 Email: `re.sonjaya@gmail.com.com`
 
 ---
 
