@@ -11,7 +11,7 @@ async function getRepoStats() {
 
   while (true) {
     try {
-      const response = await axios.get(`https://api.github.com/user/repos?per_page=100&page=${page}&type=owner`, {
+      const response = await axios.get(`https://api.github.com/user/repos?per_page=100&page=${page}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -48,7 +48,7 @@ async function updateReadme() {
   let readme = fs.readFileSync(readmePath, 'utf-8');
 
   const updatedSection = `<!--START_REPOS_COUNT-->
-  Total repositories: ${stats.total} 
+  Total repositories: ${stats.total}  
   Public: ${stats.public}  
   Private: ${stats.private}  
   Forked: ${stats.forked}
@@ -56,8 +56,8 @@ async function updateReadme() {
 
   readme = readme.replace(/<!--START_REPOS_COUNT-->[\s\S]*?<!--END_REPOS_COUNT-->/, updatedSection);
 
-  const badgeRegex = /<img src="https:\/\/img\.shields\.io\/badge\/Total%20Repositories-[^"]+"/;
-  const newBadge = `<img src="https://img.shields.io/badge/Total%20Repositories-${stats.total}-blue?style=for-the-badge&logo=github&logoColor=white"`;
+  const badgeRegex = /<img src="https:\/\/img\.shields\.io\/badge\/Total%20All%20Repositories-[^"]+"/;
+  const newBadge = `<img src="https://img.shields.io/badge/Total%20All%20Repositories-${stats.total}-blue?style=for-the-badge&logo=github&logoColor=white"`;
   readme = readme.replace(badgeRegex, newBadge);
 
   fs.writeFileSync(readmePath, readme);
