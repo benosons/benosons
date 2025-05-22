@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm <span style="color:#00BFFF">Beno Sons</span></h1>
 <h3 align="center">💻 Software Engineer | Backend Developer | Fullstack Explorer</h3>
 <p align="center">
-  <img src="https://img.shields.io/badge/Total%20Repositories-🌀%20LOADING-blue?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/Total%20Repositories-76-blue?style=for-the-badge&logo=github&logoColor=white" />
 </p>
 <p align="center">
   <a href="mailto:re.sonjaya@gmail.com">
@@ -95,5 +95,5 @@
 ---
 
 <!--START_REPOS_COUNT-->
-Total repositories: 76
-<!--END_REPOS_COUNT-->
+  Total repositories: 76
+  <!--END_REPOS_COUNT-->
