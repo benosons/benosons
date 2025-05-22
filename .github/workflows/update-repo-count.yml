@@ -26,7 +26,7 @@ jobs:
 
       - name: Update Repository Count in README
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
         run: |
           npm install axios
           node update.js
