@@ -5,19 +5,19 @@ const username = 'benosons';
 const readmePath = 'README.md';
 const token = process.env.GITHUB_TOKEN; // Use environment variable for token
 
-async function getRepoCount() {
+async function getRepoStats() {
   let page = 1;
-  let totalRepos = 0;
+  let allRepos = [];
 
   while (true) {
     try {
-      const response = await axios.get(`https://api.github.com/user/repos?per_page=100&page=${page}`, {
+      const response = await axios.get(`https://api.github.com/user/repos?per_page=100&page=${page}&type=owner`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
-      totalRepos += response.data.length;
+      allRepos = allRepos.concat(response.data);
 
-      if (response.data.length < 100) break; // Exit loop if no more pages
+      if (response.data.length < 100) break;
       page++;
     } catch (err) {
       if (err.response) {
@@ -30,7 +30,12 @@ async function getRepoCount() {
     }
   }
 
-  return totalRepos;
+  const total = allRepos.length;
+  const forked = allRepos.filter(repo => repo.fork).length;
+  const privateCount = allRepos.filter(repo => repo.private).length;
+  const publicCount = total - privateCount;
+
+  return { total, public: publicCount, private: privateCount, forked };
 }
 
 async function updateReadme() {
@@ -39,16 +44,20 @@ async function updateReadme() {
     process.exit(1);
   }
 
-  const count = await getRepoCount();
+  const stats = await getRepoStats();
   let readme = fs.readFileSync(readmePath, 'utf-8');
 
   const updatedSection = `<!--START_REPOS_COUNT-->
-  Total repositories: ${count}
+  Total repositories: ${stats.total}  
+  Public: ${stats.public}  
+  Private: ${stats.private}  
+  Forked: ${stats.forked}
   <!--END_REPOS_COUNT-->`;
+
   readme = readme.replace(/<!--START_REPOS_COUNT-->[\s\S]*?<!--END_REPOS_COUNT-->/, updatedSection);
 
   const badgeRegex = /<img src="https:\/\/img\.shields\.io\/badge\/Total%20Repositories-[^"]+"/;
-  const newBadge = `<img src="https://img.shields.io/badge/Total%20Repositories-${count}-blue?style=for-the-badge&logo=github&logoColor=white"`;
+  const newBadge = `<img src="https://img.shields.io/badge/Total%20Repositories-${stats.total}-blue?style=for-the-badge&logo=github&logoColor=white"`;
   readme = readme.replace(badgeRegex, newBadge);
 
   fs.writeFileSync(readmePath, readme);
