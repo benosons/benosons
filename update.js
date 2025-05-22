@@ -48,7 +48,7 @@ async function updateReadme() {
   let readme = fs.readFileSync(readmePath, 'utf-8');
 
   const updatedSection = `<!--START_REPOS_COUNT-->
-  Total repositories: ${stats.total}  
+  Total repositories: ${stats.total} 
   Public: ${stats.public}  
   Private: ${stats.private}  
   Forked: ${stats.forked}
