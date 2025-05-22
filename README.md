@@ -84,7 +84,7 @@
 
 ### 🧠 Quote of the Day
 
-> “i'm knowledge worker.” —
+> “Software Engineer to meet Technology and resource challenges.” —
 
 ---
 
