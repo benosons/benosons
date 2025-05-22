@@ -43,9 +43,13 @@ async function updateReadme() {
   let readme = fs.readFileSync(readmePath, 'utf-8');
 
   const updatedSection = `<!--START_REPOS_COUNT-->
-Total repositories: ${count}
-<!--END_REPOS_COUNT-->`;
+  Total repositories: ${count}
+  <!--END_REPOS_COUNT-->`;
   readme = readme.replace(/<!--START_REPOS_COUNT-->[\s\S]*?<!--END_REPOS_COUNT-->/, updatedSection);
+
+  const badgeRegex = /<img src="https:\/\/img\.shields\.io\/badge\/Total%20Repositories-[^"]+"/;
+  const newBadge = `<img src="https://img.shields.io/badge/Total%20Repositories-${count}-blue?style=for-the-badge&logo=github&logoColor=white"`;
+  readme = readme.replace(badgeRegex, newBadge);
 
   fs.writeFileSync(readmePath, readme);
   console.log('README updated successfully!');
