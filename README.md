@@ -47,10 +47,6 @@
   <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=benosons&theme=dark" alt="benosons GitHub stats" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=benosons&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages used" />
-</p>
-
 ---
 
 ### 🔥 GitHub Streak
