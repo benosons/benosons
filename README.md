@@ -49,7 +49,8 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=benosons&show_icons=true&theme=tokyonight&hide_border=true" alt="benosons GitHub stats" />
+  <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=benosons&theme=dark" alt="benosons GitHub stats" />
+  <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=benosons&theme=dark" alt="benosons GitHub stats" />
 </p>
 
 <p align="center">
