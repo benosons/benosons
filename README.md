@@ -1,5 +1,3 @@
-<h1 align="center">Hi 👋, I'm <span style="color:#00BFFF">Beno Sons</span></h1>
-<h3 align="center">💻 Software Engineer | Backend Developer | Fullstack Explorer</h3>
 <p align="center">
   <img src="https://img.shields.io/badge/Total%20All%20Repositories-77-blue?style=for-the-badge&logo=github&logoColor=white" />
 </p>
@@ -18,13 +16,9 @@
 ---
 
 ### 🚀 About Me
-- 🔭 Currently developing with Django & Laravel
-- 🧠 Passionate about combining backend tech, data, and automation
-- 🌱 Learning: WebSocket security, Ollama + RAG, cross-framework integration
-- ⚙️ Tech stack includes:
-  - `Python`, `PHP`, `JavaScript`
-  - `Django`, `Laravel`, `CodeIgniter`
-  - PostgreSQL, MySQL, Vue.js, Tailwind, Docker
+<p align="center">
+<img src="https://metrics.lecoq.io/benosons?template=classic&base.indepth=true&isocalendar=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&base.hireable=false&base.skip=false&isocalendar=false&isocalendar.duration=full-year&config.timezone=Asia%2FJakarta" />
+</p>
 
 ---
 
