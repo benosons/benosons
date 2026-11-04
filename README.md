@@ -72,7 +72,7 @@
 ### 📈 Contribution Graph
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/409ba5/benosons" alt="GitHub contribution graph" />
+  <img src="https://ghchart.rshah.org/40c463/benosons" alt="GitHub contribution graph" />
 </p>
 
 ---
